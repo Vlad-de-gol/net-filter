@@ -96,21 +96,6 @@ var products = [
 		}
 ]
 
-// all products
-/*
-var elProduct = document.getElementById('product');
-var newContent = '';
-for (var i = 0; i < products.length; i++){
-	newContent += '<div class="product__content">';
-	newContent += '<img class="product__content__img" src="' + products[i].src + '" ';
-	newContent += 'alt="' + products[i].name + '" />';
-	newContent += '<span><b>' + products[i].name + '</b></span>';
-	newContent += '<span><b>$ ' + products[i].price + '</b></span>';
-	newContent += '</div>';
-}
-elProduct.innerHTML = newContent;
-*/
-
 //pagination
 
 var PAGINATION_NUMBER = 6,
@@ -121,7 +106,7 @@ var PAGINATION_NUMBER = 6,
 			newContent += '<div class="product__content">';
 			newContent += '<img class="product__content__img" src="' + products[i].src + '" ';
 			newContent += 'alt="' + products[i].name + '" />';
-			newContent += '<span><b>' + products[i].name + '</b></span>';
+			newContent += '<span><b><a href=' + products[i].name + '>' + products[i].name + '</a></b></span>';
 			newContent += '<span><b>$ ' + products[i].price + '</b></span>';
 			newContent += '</div>';
 		}
@@ -141,7 +126,7 @@ function searchInput(){
 						newContent += '<div class="product__content">';
 						newContent += '<img class="product__content__img" src="' + products[i].src + '" ';
 						newContent += 'alt="' + products[i].name + '" />';
-						newContent += '<span><b>' + products[i].name + '</b></span>';
+						newContent += '<span><b><a href=' + products[i].name + '>' + products[i].name + '</b></a></span>';
 						newContent += '<span><b>$ ' + products[i].price + '</b></span>';
 						newContent += '</div>';
 						elProduct.innerHTML = newContent;
@@ -155,41 +140,42 @@ function pagination() {
 		var plagin = '';
 		for (var i = 0; i < $page; i++){
 			var roundNumber = (i + 1);
-			plagin += '<li><a href="' + roundNumber + '">' + roundNumber + '</a></li>';
+			plagin += '<li><span>' + roundNumber + '</span></li>';
 
 		}
-
 		document.querySelector('.list').innerHTML = plagin;
-
 		var startItem = document.querySelector('ul > li');
 		startItem.classList.add('active');
+			window.onload = function(){
+			    el = document.getElementById('list');
+			    items = el.getElementsByTagName('li');
+			    for(i=0; i<items.length; i++){
+			        items[i].i = i;
+			        items[i].onclick = eventPlagination;
 
-
-
-		var clickOnPagination = document.querySelector('.list');
-		clickOnPagination.onclick = function(e){
-			e.preventDefault();
-			var li = event.srcElement || e.target;
-			while(li.tagName != "LI" && li ){
-				//li = li.parentNode;
-				li = document.querySelector('a').getAttribute('href');
+			    }
+			    function  eventPlagination(){
+						var ept = document.getElementsByClassName('active');
+						while(ept.length > 0){
+					    ept[0].classList.remove('active');
+					}
+						this.classList.add('active');
+						elProduct = document.getElementById('product');
+						elProduct.innerHTML = '';
+			    	var numPlagination = (Number(this.i) + 1) * PAGINATION_NUMBER;
+								console.log(numPlagination);
+								console.log(numPlagination + PAGINATION_NUMBER);
+								var newContent = '';
+								for (i = numPlagination; i > 0; i--){
+										newContent += '<div class="product__content">';
+										newContent += '<img class="product__content__img" src="' + products[numPlagination - i].src + '" ';
+										newContent += 'alt="' + products[numPlagination - i].name + '" />';
+										newContent += '<span><b><a href=' + products[i].name + '>' + products[numPlagination - i].name + '</a></b></span>';
+										newContent += '<span><b>$ ' + products[numPlagination - i].price + '</b></span>';
+										newContent += '</div>';
+										elProduct.innerHTML = newContent;
+							}
+		    	}
 			}
-			alert(li);
-
-	 	};
-
-
-
-		/*$('.nav-products li a').click(function(e){
-			e.preventDefault();
-				$('.nav-products li').removeClass('active');
-				$(this).parents('li').addClass('active');
-				$('.products').html('');
-				var $eventPlagination = Number($(this).attr('href'));
-				var item = $eventPlagination * PAGINATION_NUMBER;
-				for (var i = PAGINATION_NUMBER; i > 0; i--){
-					$('.products').append('<div class="product"><div class="images"><button class="remove-botton remove">remove from list</button><img src="' + data[item - i].img +'"></div><h3 class="name">' + data[item - i].name +'</h3><span class="price">$' + data[item - i].price +'<del>' + data[item - i].old_price +'</del></span><ul class="buttons"><li><a href="#" class="remove"><i class="fa fa-trash" aria-hidden="true"></i></a></li><li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li></ul></div>');
-				} */
-	 //var elSearch = document.getElementsByClassName('search');
 }
 pagination();
