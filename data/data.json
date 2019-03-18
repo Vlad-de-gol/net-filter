@@ -1,0 +1,77 @@
+[
+		{
+			"name"	: "Acer Aspire Black",
+			"price"	: " 200 ",
+			"src"	: "images/Acer Aspire E 15 E5-576G Obsidian Black.jpg"
+		},
+		{
+			"name"	: "Acer Packard Bell",
+			"price"	: " 180 ",
+			"src"	: "images/Acer Packard Bell.jpg"
+		},
+		{
+			"name"	: "Acer Swift 5 Charcoal Blue",
+			"price"	: " 350 ",
+			"src"	: "images/Acer Swift 5 Charcoal Blue.jpg"
+		},
+		{
+			"name"	: "ASUS VivoBook Icicle Gold",
+			"price"	: " 700 ",
+			"src"	: "images/ASUS VivoBook Icicle Gold.jpg"
+		},
+		{
+			"name"	: "Dell Latitude 14 3480 Black",
+			"price"	: " 800 ",
+			"src"	: "images/Dell Latitude 14 3480 Black.jpg"
+		},
+		{
+			"name"	: "HP 250 G6",
+			"price"	: " 758 ",
+			"src"	: "images/HP 250 G6.jpg"
+		},
+		{
+			"name"	: "Lenovo IdeaPad Platinum Gray",
+			"price"	: " 150 ",
+			"src"	: "images/Lenovo IdeaPad Platinum Gray.jpg"
+		},
+		{
+			"name"	: "Lenovo Yoga Platinum",
+			"price"	: " 170 ",
+			"src"	: "images/Lenovo Yoga Platinum.jpg"
+		},
+		{
+			"name"	: "Microsoft Surface Book Silver",
+			"price"	: " 750 ",
+			"src"	: "images/Microsoft Surface Book Silver.jpg"
+		},
+		{
+			"name"	: "MSI GT75 Titan",
+			"price"	: " 1000 ",
+			"src"	: "images/MSI GT75 Titan.jpg"
+		},
+		{
+			"name"	: "Panasonic ToughBook",
+			"price"	: " 1050 ",
+			"src"	: "images/Panasonic ToughBook Silver.jpg"
+		},
+		{
+			"name"	: "Panasonic ToughBook",
+			"price"	: " 100 ",
+			"src"	: "images/Panasonic ToughBook.jpg"
+		},
+		{
+			"name"	: "Xiaomi Mi Gaming Laptop",
+			"price"	: " 1010 ",
+			"src"	:"images/Xiaomi Mi Gaming Laptop.jpg"
+		},
+		{
+			"name"	: "Xiaomi Mi Notebook Air",
+			"price"	: " 1100 ",
+			"src"	:"images/Xiaomi Mi Notebook Air.jpg"
+		},
+		{
+			"name"	: "Xiaomi Mi Notebook",
+			"price"	: " 900 ",
+			"src"	:"images/Xiaomi Mi Notebook.jpg"
+		}
+	]

@@ -1,0 +1,59 @@
+body, input{
+  font:16px Arial, sans-serif;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 832px;
+    margin: 0 auto;
+}
+.product__content{
+  display: flex;
+  flex-direction: column;
+  border:1px solid #ccc;
+  margin: 5px;
+  padding: 5px;
+}
+.product__content span{
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.product__content__price:before{
+  content: '$';
+}
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 822px;
+    margin: 0 auto;
+    padding: 5px 5px;
+}
+.filter input{
+    height: 24px;
+    padding: 3px;
+}
+.pagination{
+  width: 100%;
+}
+.pagination ul{
+  display: flex;
+  margin: 25px auto;
+  justify-content: center;
+  list-style: none;
+}
+.pagination ul li a{
+  display: flex;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    text-decoration: none;
+    margin: 3px;
+}
+.pagination ul li a:hover,
+.pagination ul li.active a{
+  color: #000;
+  border: 1px solid #000;
+}
